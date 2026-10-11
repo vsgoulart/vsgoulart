@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Not found &middot; goulart.dev</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#f9f6f4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#18151a" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="/fonts/JetBrainsMono-ExtraBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <div aria-hidden="true">
+        <span class="block block-a"></span>
+        <span class="block block-b"></span>
+        <span class="block disc"></span>
+        <span class="block square"></span>
+
+        <span class="line v" style="--x: var(--x1); --d: 0s"></span>
+        <span class="line v" style="--x: var(--x2); --d: 0.12s"></span>
+        <span class="line v" style="--x: var(--x3); --d: 0.24s"></span>
+        <span class="line h" style="--y: var(--y1); --d: 0.18s"></span>
+        <span class="line h from-right" style="--y: var(--y2); --d: 0.3s"></span>
+
+        <span class="runner"></span>
+        <span class="scanner"></span>
+      </div>
+
+      <input
+        type="checkbox"
+        id="theme"
+        class="theme-toggle"
+        aria-label="Invert colours"
+        title="Toggle dark mode"
+      />
+
+      <p class="label"><a href="/">goulart.dev</a></p>
+
+      <header class="hero">
+        <h1 class="title" aria-label="Not found.">
+          <span class="word" aria-hidden="true"
+            ><span class="ch" style="--i: 0">N</span
+            ><span class="ch" style="--i: 1">o</span
+            ><span class="ch" style="--i: 2">t</span></span
+          >
+          <span class="word" aria-hidden="true"
+            ><span class="ch" style="--i: 3">f</span
+            ><span class="ch" style="--i: 4">o</span
+            ><span class="ch" style="--i: 5">u</span
+            ><span class="ch" style="--i: 6">n</span
+            ><span class="ch" style="--i: 7">d</span
+            ><span class="ch dot" style="--i: 8">.</span></span
+          >
+        </h1>
+      </header>
+
+      <span class="progress" aria-hidden="true"></span>
+    </main>
+  </body>
+</html>
