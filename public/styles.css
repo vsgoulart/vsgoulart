@@ -558,15 +558,101 @@ body,
   }
 }
 
-/* Narrow screens */
+/* Narrow screens: three equal columns, blobs span two columns so they stay round */
 
 @media (max-width: 720px) {
   :root {
-    --x1: 14%;
-    --x2: 58%;
-    --x3: 84%;
+    --x1: 33.333%;
+    --x2: 66.667%;
     --y1: 22%;
     --y2: 50%;
+    --row3: 28%;
+  }
+
+  .line-x3 {
+    display: none;
+  }
+
+  .square {
+    left: calc(var(--x2) - var(--s) / 2);
+  }
+
+  .block-a {
+    left: var(--x1);
+    top: var(--y1);
+    width: calc(100% - var(--x1));
+    height: calc(var(--y2) - var(--y1));
+  }
+
+  .block-b {
+    left: 0;
+    top: var(--y2);
+    width: var(--x2);
+    height: var(--row3);
+  }
+
+  @keyframes block-a-loop {
+    0%,
+    18%,
+    100% {
+      left: var(--x1);
+      top: var(--y1);
+      width: calc(100% - var(--x1));
+      height: calc(var(--y2) - var(--y1));
+    }
+    25%,
+    43% {
+      left: 0%;
+      top: var(--y1);
+      width: var(--x2);
+      height: calc(var(--y2) - var(--y1));
+    }
+    50%,
+    68% {
+      left: var(--x1);
+      top: 0%;
+      width: calc(100% - var(--x1));
+      height: var(--y1);
+    }
+    75%,
+    93% {
+      left: 0%;
+      top: var(--y2);
+      width: var(--x2);
+      height: var(--row3);
+    }
+  }
+
+  @keyframes block-b-loop {
+    0%,
+    18%,
+    100% {
+      left: 0%;
+      top: var(--y2);
+      width: var(--x2);
+      height: var(--row3);
+    }
+    25%,
+    43% {
+      left: var(--x1);
+      top: var(--y2);
+      width: calc(100% - var(--x1));
+      height: var(--row3);
+    }
+    50%,
+    68% {
+      left: 0%;
+      top: var(--y1);
+      width: var(--x2);
+      height: calc(var(--y2) - var(--y1));
+    }
+    75%,
+    93% {
+      left: var(--x1);
+      top: var(--y1);
+      width: calc(100% - var(--x1));
+      height: calc(var(--y2) - var(--y1));
+    }
   }
 
   .title {
